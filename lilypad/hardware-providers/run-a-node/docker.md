@@ -87,6 +87,12 @@ To run the Lilypad services in a container as a background process, replace \<yo
 docker run -d --name lilypad-resource-provider --gpus all -e WEB3_PRIVATE_KEY=<private key> --restart always ghcr.io/lilypad-tech/resource-provider:latest
 ```
 
+If you want to run the Lilypad service with your own personal WEB3_RPC_URL execute the following command:
+
+```bash
+docker run -d --name lilypad-resource-provider --gpus all -e WEB3_PRIVATE_KEY=<private key> -e WEB3_RPC_URL=<personal_arbitrum_rpc> --restart always ghcr.io/lilypad-tech/resource-provider:latest
+```
+
 ## Enable Automatic Updates
 
 To automatically monitor and update the Lilypad resource provider container, you can use lilypad-watchtower. It ensures the container is kept up to date by periodically checking for new image versions.
